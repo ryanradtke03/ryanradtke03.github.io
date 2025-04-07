@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Week 3 - HTML Responsive Layout</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <header class="header">
+        <button id="menuToggle" class="menu-btn">☰</button>
+        Header
+      </header>
+      <aside class="sidebar" id="sidebar">Sidebar</aside>
+      <main class="main">Main Content</main>
+      <footer class="footer">Footer</footer>
+    </div>
+
+    <script>
+      const toggle = document.getElementById("menuToggle");
+      const sidebar = document.getElementById("sidebar");
+      const container = document.querySelector(".container");
+
+      toggle.addEventListener("click", () => {
+        sidebar.classList.toggle("show");
+        container.classList.toggle("sidebar-open");
+      });
+    </script>
+  </body>
+</html>
